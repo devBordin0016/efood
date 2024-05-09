@@ -1,36 +1,32 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
 
-export const Card = styled.div`
-  border: 1px solid ${cores.fontColor};
-  max-width: 472px;
-  width: 100%;
-  font-size: 14px;
-  overflow: hidden;
-`
-
-export const CardHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin: 8px;
-  font-size: 18px;
-`
-
-export const Rating = styled.div`
-  display: flex;
-
-  img {
-    margin-left: 8px;
-  }
-`
-export const Descricao = styled.p`
-  margin: 16px 8px 0px 8px;
-`
-
-export const Button = styled.button`
-  margin: 16px 8px 8px;
-  padding: 4px 6px;
-  border: none;
-  color: ${cores.branco};
+export const ProductCard = styled.div`
+  width: 320px;
+  padding: 8px;
   background-color: ${cores.fontColor};
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    padding: 8px 0;
+    font-weight: 900;
+    font-size: 16px;
+    color: ${cores.bgColor};
+  }
+
+  p {
+    font-size: 14px;
+    padding-bottom: 8px;
+    color: ${cores.bgColor};
+  }
+
+  button {
+    color: ${cores.fontColor};
+    background-color: ${cores.bgColor};
+    border: none;
+    font-weight: 700;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
 `

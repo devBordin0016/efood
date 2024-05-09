@@ -1,15 +1,14 @@
 import Product from '../Product'
-import { List } from './syles'
-
+import { ProductList as ProductListStyle } from './styles'
 const ProductList = () => (
-  <List>
+  <ProductListStyle>
     <Product />
     <Product />
     <Product />
     <Product />
     <Product />
     <Product />
-  </List>
+  </ProductListStyle>
 )
 
 export default ProductList
