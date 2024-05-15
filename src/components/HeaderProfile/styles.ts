@@ -15,7 +15,7 @@ export const Cabecalho = styled.div`
     margin: 0 auto;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
 `
@@ -23,7 +23,6 @@ export const Cabecalho = styled.div`
 export const Logo = styled.img`
   width: 125px;
 `
-
 export const HomeLink = styled(Link)`
   text-decoration: none;
 `
@@ -31,19 +30,39 @@ export const HomeLink = styled(Link)`
 export const CabecalhoImg = styled.div`
   height: 280px;
   padding: 24px 170px 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
 
-  h1:first-child {
-    font-weight: 100;
-    color: ${cores.branco};
+  &::after {
+    position: absolute;
+    width: 100%;
+    height: 280px;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    content: '';
   }
 
-  h1:nth-child(2) {
-    font-weight: 900;
-    color: ${cores.branco};
+  div {
+    width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h1:first-child {
+      font-weight: 100;
+      color: ${cores.branco};
+      z-index: 1;
+    }
+
+    h1:nth-child(2) {
+      font-weight: 900;
+      color: ${cores.branco};
+      z-index: 1;
+    }
   }
 `

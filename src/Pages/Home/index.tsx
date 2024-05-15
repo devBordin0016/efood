@@ -1,56 +1,44 @@
 import Footer from '../../components/Footer'
-import Header from '../../components/Header'
 import RestaurantList from '../../components/RestaurantList'
-import RestaurantModel from '../../models/Restaurant'
+import HeaderHome from '../../components/HeaderHome'
+import { useEffect, useState } from 'react'
 
-import hiokiSushi from '../../assets/images/hiokiSushi.svg'
-import dolceVita from '../../assets/images/DolceVita.svg'
+export type Cardapio = {
+  foto: string
+  preco: number
+  id: number
+  nome: string
+  descricao: string
+  porcao: string
+}
 
-const restaurantes: RestaurantModel[] = [
-  {
-    id: 1,
-    image: hiokiSushi,
-    name: 'Hioki Sushi',
-    rating: '4.9',
-    description:
-      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida. Experimente o Japão sem sair do lar com nosso delivery!',
-    infos: ['Destaque da Semana', 'Japonesa']
-  },
-  {
-    id: 2,
-    image: dolceVita,
-    name: 'La Dolce Vita Trattoria',
-    rating: '4.6',
-    description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    infos: ['Italiana']
-  },
-  {
-    id: 2,
-    image: dolceVita,
-    name: 'La Dolce Vita Trattoria',
-    rating: '4.6',
-    description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    infos: ['Italiana']
-  },
-  {
-    id: 2,
-    image: dolceVita,
-    name: 'La Dolce Vita Trattoria',
-    rating: '4.6',
-    description:
-      'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
-    infos: ['Italiana']
-  }
-]
+export type Restaurante = {
+  id: number
+  titulo: string
+  destacado: boolean
+  tipo: string
+  avaliacao: string
+  descricao: string
+  capa: string
+  cardapio: Cardapio[]
+}
 
-const Home = () => (
-  <>
-    <Header />
-    <RestaurantList restaurants={restaurantes} />
-    <Footer />
-  </>
-)
+const Home = () => {
+  const [restaurantes, setRestaurantes] = useState<Restaurante[]>([])
+
+  useEffect(() => {
+    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
+      .then((res) => res.json())
+      .then((res) => setRestaurantes(res))
+  }, [])
+
+  return (
+    <>
+      <HeaderHome />
+      <RestaurantList restaurantes={restaurantes} />
+      <Footer />
+    </>
+  )
+}
 
 export default Home

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Cabecalho = styled.div`
+export const Header = styled.div`
   width: 100%;
   height: 380px;
   display: flex;

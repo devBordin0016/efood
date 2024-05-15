@@ -12,6 +12,16 @@ export const Card = styled.div`
   position: relative;
 `
 
+export const CardImage = styled.div`
+  width: 100%;
+  height: 250px;
+  overflow-y: hidden;
+
+  img {
+    width: 100%;
+  }
+`
+
 export const CardHeader = styled.div`
   font-size: 18px;
   display: flex;

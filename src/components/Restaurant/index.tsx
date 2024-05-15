@@ -1,34 +1,34 @@
 import estrela from '../../assets/images/estrela.svg'
-
-import Tag from '../Tag'
-import { ButtonLink, Card, CardHeader, CardInfos, Infos } from './styles'
+import { ButtonLink, Card, CardHeader, CardImage, CardInfos } from './styles'
 
 type Props = {
-  name: string
-  rating: string
-  description: string
-  infos: string[]
-  image: string
+  titulo: string
+  avaliacao: string
+  descricao: string
+  capa: string
+  id: number
 }
 
-const Restaurant = ({ name, rating, description, infos, image }: Props) => (
+const Restaurant = ({ titulo, avaliacao, descricao, capa, id }: Props) => (
   <Card>
-    <img src={image} alt={image} />
+    <CardImage>
+      <img src={capa} alt="Foto do restaurante" />
+    </CardImage>
     <CardInfos>
       <CardHeader>
-        <h3>{name}</h3>
+        <h3>{titulo}</h3>
         <div>
-          <h3>{rating}</h3>
+          <h3>{avaliacao}</h3>
           <img src={estrela} alt="avaliação" />
         </div>
       </CardHeader>
-      <Infos>
+      {/* <Infos>
         {infos.map((info) => (
           <Tag key={info}>{info}</Tag>
         ))}
-      </Infos>
-      <p>{description}</p>
-      <ButtonLink to={'/profile'}>Saiba mais</ButtonLink>
+      </Infos> */}
+      <p>{descricao}</p>
+      <ButtonLink to={`/profile/${id}`}>Saiba mais</ButtonLink>
     </CardInfos>
   </Card>
 )
