@@ -3,15 +3,16 @@ import Product from '../Product'
 import { ProductListStyle } from './styles'
 
 type Props = {
-  restaurante: Cardapio[]
+  produtos: Cardapio[]
 }
 
-const ProductList = ({ restaurante }: Props) => {
+const ProductList = ({ produtos }: Props) => {
   return (
     <ProductListStyle>
-      {restaurante.map((produto) => (
+      {produtos.map((produto) => (
         <Product
           key={produto.id}
+          id={produto.id}
           descricao={produto.descricao}
           nome={produto.nome}
           foto={produto.foto}
