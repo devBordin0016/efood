@@ -4,7 +4,8 @@ export const cores = {
   fontColor: '#E66767',
   bgColor: '#FFF8F2',
   branco: '#fff',
-  bgFooter: '#FFEBD9'
+  bgFooter: '#FFEBD9',
+  inputTxtColor: '#4B4B4B'
 }
 
 const GlobalStyle = createGlobalStyle`
