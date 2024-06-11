@@ -191,7 +191,7 @@ const Cart = () => {
                   })}
                 </ul>
                 <S.Total>
-                  <p>Valor S.Total</p>
+                  <p>Valor</p>
                   <p>{formataPreco(getTotalPrice())}</p>
                 </S.Total>
                 <S.CartButton
