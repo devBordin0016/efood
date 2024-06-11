@@ -126,7 +126,7 @@ const Cart = () => {
       form.values.receiver &&
       form.values.address &&
       form.values.city &&
-      form.values.zipCode
+      form.values.zipCode &&
       form.values.number
     ) {
       setMenu('payment')
