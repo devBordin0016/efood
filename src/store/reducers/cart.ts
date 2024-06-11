@@ -4,11 +4,13 @@ import { Cardapio } from '../../Pages/Home'
 type CartState = {
   items: Cardapio[]
   isOpen: boolean
+  isPayed: boolean
 }
 
 const initialState: CartState = {
   items: [],
-  isOpen: false
+  isOpen: false,
+  isPayed: false
 }
 
 const cartSlice = createSlice({

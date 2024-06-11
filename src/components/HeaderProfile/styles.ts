@@ -29,6 +29,10 @@ export const Logo = styled.img`
 `
 export const HomeLink = styled(Link)`
   text-decoration: none;
+
+  &:visited {
+    color: ${cores.fontColor};
+  }
 `
 
 export const CabecalhoImg = styled.div`

@@ -2,6 +2,10 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 import { Link } from 'react-router-dom'
 
+type InputProps = {
+  maxWidth?: string
+}
+
 type InputGroupProps = {
   maxWidth?: string
 }
@@ -124,6 +128,11 @@ export const PaymentMenu = styled.div`
 
   > div {
     margin-bottom: 24px;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 `
 export const ConfirmationMenu = styled.div`
@@ -144,6 +153,7 @@ export const InputGroup = styled.div<InputGroupProps>`
   flex-direction: column;
   margin-bottom: 8px;
   width: 100%;
+  max-width: ${(props) => props.maxWidth};
 
   label {
     margin-bottom: 8px;
@@ -158,6 +168,20 @@ export const InputGroup = styled.div<InputGroupProps>`
     max-width: ${(props) => props.maxWidth};
 
     &.error {
-      border: 3px solid red;
+      border: 2px solid red;
     }
+  }
+`
+
+export const Input = styled.input<InputProps>`
+  background-color: ${cores.bgFooter};
+  color: ${cores.inputTxtColor};
+  border: none;
+  height: 32px;
+  width: 100%;
+  max-width: ${(props) => props.maxWidth};
+
+  &.error {
+    border: 2px solid red;
+  }
 `

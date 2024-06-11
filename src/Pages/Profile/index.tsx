@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 
-import { useGetRestaurantQuery } from '../../services/api'
+import { useGetRestaurantSelectedQuery } from '../../services/api'
 
 import Footer from '../../components/Footer'
 import HeaderProfile from '../../components/HeaderProfile'
@@ -10,7 +10,7 @@ const Profile = () => {
   const { id } = useParams()
 
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-  const { data: restaurante } = useGetRestaurantQuery(id!)
+  const { data: restaurante } = useGetRestaurantSelectedQuery(id!)
 
   if (!restaurante) {
     return <h3>Carregando...</h3>

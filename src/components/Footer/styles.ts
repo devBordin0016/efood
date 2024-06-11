@@ -1,7 +1,7 @@
 import { styled } from 'styled-components'
 import { cores } from '../../styles'
 
-export const Footer = styled.footer`
+export const FooterStyle = styled.footer`
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: ${cores.bgFooter};

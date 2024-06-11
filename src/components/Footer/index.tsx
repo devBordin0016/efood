@@ -2,33 +2,27 @@ import logo from '../../assets/images/logo.svg'
 import instagram from '../../assets/images/Instagram.svg'
 import meta from '../../assets/images/Meta.svg'
 import x from '../../assets/images/X.svg'
-import {
-  Logo,
-  Footer as FooterStyle,
-  List,
-  ListItem,
-  Copyrights
-} from './syles'
+import * as S from './styles'
 const Footer = () => (
-  <FooterStyle>
-    <Logo src={logo} alt="efood" />
-    <List>
-      <ListItem>
+  <S.FooterStyle>
+    <S.Logo src={logo} alt="efood" />
+    <S.List>
+      <S.ListItem>
         <img src={instagram} alt="" />
-      </ListItem>
-      <ListItem>
+      </S.ListItem>
+      <S.ListItem>
         <img src={meta} alt="" />
-      </ListItem>
-      <ListItem>
+      </S.ListItem>
+      <S.ListItem>
         <img src={x} alt="" />
-      </ListItem>
-    </List>
-    <Copyrights>
+      </S.ListItem>
+    </S.List>
+    <S.Copyrights>
       A efood é uma plataforma para divulgação de estabelecimentos, a
       responsabilidade pela entrega, qualidade dos produtos é toda do
       estabelecimento contratado.
-    </Copyrights>
-  </FooterStyle>
+    </S.Copyrights>
+  </S.FooterStyle>
 )
 
 export default Footer
