@@ -1,6 +1,6 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { cores } from '../../styles'
-import { Link } from 'react-router-dom'
 
 type InputProps = {
   maxWidth?: string
@@ -76,6 +76,7 @@ export const RemoveButton = styled.button`
   height: 16px;
   right: 8px;
   bottom: 8px;
+  border: none;
 `
 export const Total = styled.div`
   color: ${cores.bgColor};
