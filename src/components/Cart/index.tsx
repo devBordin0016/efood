@@ -1,16 +1,16 @@
-import { useDispatch, useSelector } from 'react-redux'
-import { useState } from 'react'
 import { useFormik } from 'formik'
-import * as Yup from 'yup'
+import { useState } from 'react'
 import InputMask from 'react-input-mask'
+import { useDispatch, useSelector } from 'react-redux'
+import * as Yup from 'yup'
 
-import * as S from './styles'
 import { RootReducer } from '../../store'
 import { formataPreco } from '../Product'
+import * as S from './styles'
 
 import removeImg from '../../assets/images/remove.svg'
-import { close, remove } from '../../store/reducers/cart'
 import { usePurchaseMutation } from '../../services/api'
+import { close, remove } from '../../store/reducers/cart'
 
 const Cart = () => {
   const { isOpen, items } = useSelector((state: RootReducer) => state.cart)
@@ -105,12 +105,7 @@ const Cart = () => {
   }
 
   const getTotalPrice = () => {
-    return items.reduce((acc, curr) => {
-      if ((acc += curr.preco)) {
-        return (acc += curr.preco)
-      }
-      return 0
-    }, 0)
+    return items.reduce((acc, curr) => acc + curr.preco, 0)
   }
 
   const getError = (fieldName: string) => {
