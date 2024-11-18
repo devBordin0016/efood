@@ -6,7 +6,7 @@ import bgImg from '../../assets/images/Vector.svg'
 const HeaderHome = () => (
   <Header style={{ backgroundImage: `url(${bgImg})` }}>
     <Logo src={logo} alt="efood" />
-    <Slogan>Viva experiências gastronômicas no conforto da sua casa</Slogan>
+    <Slogan>Viva experiencias gastronomicas no conforto da sua casa</Slogan>
   </Header>
 )
 

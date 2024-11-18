@@ -18,8 +18,8 @@ const Footer = () => (
       </S.ListItem>
     </S.List>
     <S.Copyrights>
-      A efood é uma plataforma para divulgação de estabelecimentos, a
-      responsabilidade pela entrega, qualidade dos produtos é toda do
+      A efood e uma plataforma para divulgacao de estabelecimentos, a
+      responsabilidade pela entrega, qualidade dos produtos e toda do
       estabelecimento contratado.
     </S.Copyrights>
   </S.FooterStyle>

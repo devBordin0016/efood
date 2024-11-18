@@ -142,17 +142,17 @@ const Cart = () => {
             <>
               <h3>Pedido realizado - {data?.orderId || 'ORDER_ID'}</h3>
               <p>
-                Gostaríamos de ressaltar que nossos entregadores não estão
-                autorizados a realizar cobranças extras.
+                Gostariamos de ressaltar que nossos entregadores nao estao
+                autorizados a realizar cobrancas extras.
               </p>
               <p>
-                Lembre-se da importância de higienizar as mãos após o
-                recebimento do pedido, garantindo assim sua segurança e
-                bem-estar durante a refeição.
+                Lembre-se da importancia de higienizar as maos apos o
+                recebimento do pedido, garantindo assim sua seguranca e
+                bem-estar durante a refeicao.
               </p>
               <p>
-                Esperamos que desfrute de uma deliciosa e agradável experiência
-                gastronômica. Bom apetite!
+                Esperamos que desfrute de uma deliciosa e agradavel experiencia
+                gastronomica. Bom apetite!
               </p>
             </>
             <S.CartButton>
@@ -262,7 +262,7 @@ const Cart = () => {
                       />
                     </S.InputGroup>
                     <S.InputGroup maxWidth="155px">
-                      <label htmlFor="number">Número</label>
+                      <label htmlFor="number">Numero</label>
                       <input
                         name="number"
                         type="text"
@@ -311,7 +311,7 @@ const Cart = () => {
                 </h3>
                 <div>
                   <S.InputGroup>
-                    <label htmlFor="cardName">Nome no cartão</label>
+                    <label htmlFor="cardName">Nome no cartao</label>
                     <S.Input
                       maxWidth="344px"
                       type="text"
@@ -328,7 +328,7 @@ const Cart = () => {
                       style={{ marginRight: '30px' }}
                       maxWidth="228px"
                     >
-                      <label htmlFor="cardNumber">Número do cartão</label>
+                      <label htmlFor="cardNumber">Numero do cartao</label>
                       <InputMask
                         mask="9999 9999 9999 9999"
                         type="text"
@@ -356,7 +356,7 @@ const Cart = () => {
                   </div>
                   <div>
                     <S.InputGroup maxWidth="155px">
-                      <label htmlFor="expiresMonth">Mês do vencimento</label>
+                      <label htmlFor="expiresMonth">Mes do vencimento</label>
                       <InputMask
                         mask="99"
                         type="text"
@@ -397,7 +397,7 @@ const Cart = () => {
                     setMenu('delivery')
                   }}
                 >
-                  Voltar para a edição de endereço
+                  Voltar para a edicao de endereco
                 </S.CartButton>
               </S.PaymentMenu>
             )}

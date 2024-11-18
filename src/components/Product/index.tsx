@@ -68,7 +68,7 @@ const Product = ({ id, nome, descricao, porcao, foto, preco }: Props) => {
                 />
               </div>
               <p>{descricao}</p>
-              <p>Porção: {porcao}</p>
+              <p>Porcao: {porcao}</p>
               <button
                 onClick={addToCart}
               >{`Adicionar ao carrinho - ${formataPreco(preco)}`}</button>
